@@ -1,0 +1,206 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\Large Hariprasath Parthasarathy} & Email : \href{mailto:hariprasath95@gmail.com}{hariprasath95@gmail.com}\\
+  \ &\ Mobile : +1-716-427-9783 \\
+
+\end{tabular*}
+
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University at Buffalo(State University of New York)}{Buffalo, NY}
+      {Master of Science in Computer Science and Engineering }{Aug. 2018 -- May. 2020}
+      \begin{itemize}
+        \item {{Coursework : Analysis of algorithms, Computer vision and image processing, operating systems.}} 
+        \vspace{-5px}
+      \end{itemize} 
+
+    \resumeSubheading
+      {Sri Ramakrishna Engineering College}{Coimbatore, India}
+      {Bachelor of Engineering in Computer Science and Engineering.  }{Aug. 2013 -- July. 2017}
+
+
+  \resumeSubHeadingListEnd
+ 
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Zoho Corporation}{Chennai, IN}
+      {Member technical Staff - Zoho labs - Research and Development}{May 2017 - May 2018}
+      \resumeItemListStart
+        \resumeItem{Cstore -FDW (Columnar  storages ,OLAP systems)}
+          {    
+            \resumeItemListStart
+            \item{{Modified CITUSDB CStore FDW to accommodate in-memory caching, deletes and JIT executor.}}
+            \item{{The JIT executor improved query performance by a factor of 8 - 10 on OLAP queries of 30 millions rows.}}
+            \item{{Deployed Cstore system backing kafka/mysql across 30 clusters.}}
+            \resumeItemListEnd
+            }\vspace{2px}
+
+               \resumeItemListEnd
+
+      \resumeSubheading
+        {Zoho Corporation}{Chennai, IN}
+        {Member technical Staff Intern - Zoho labs - Research and Development}{Jan 2017 - Mar 2018}
+        \resumeItemListStart
+        \resumeItem{In Memory Foreign Data Wrapper For PostgreSQL (Database Design, C with LLVM, codegen API)}
+        {
+          \resumeItemListStart
+            \item{{Designed and implemented the storage engine and executor as a foreign data wrapper for postgreSQL.}}
+            \item{{Successfully implemented lock free indexing(BW tree) and write ahead logging.}}
+            \resumeItemListEnd
+        }  
+        \resumeItemListEnd
+        \resumeSubheading
+      {Sri Ramakrishna Engineering College - Centre For Innovation }{Coimbatore, India}
+      { Undergraduate Research / Student Chairman  }{Aug. 2015 -- Dec. 2016}
+      \resumeItemListStart  
+      \resumeItem{Fleet Management System -(Android,AngularJS-2,Redis,Embedded Systems)}  
+        {
+          \resumeItemListStart
+          \item{{Led a team of 4 people to Design and implement hardware and software for the fleet management system.}}
+          \item{{Detect irregular driving patterns and approximate time of arrival for institutional vehicles.}}
+          \item{{Proved its commercial viability - And was Implemented for 50 vehicles for SNR Trust.}}
+        \resumeItemListEnd
+        }\vspace{2px}
+        \resumeItem{Industrial Data Logging (Arduino, Mysql, PHP)}
+        {
+          \resumeItemListStart
+          \item{ {A real time system used to extract production data from CNC machines. 
+        It  aided proper planning and execution of orders in micro industries.
+        }}
+        \item{ {A pilot run of the project was executed in a padmabalaji spinners.
+        }}
+        \item{ {Won the best mini project award for its commercial viability and worker ease of use.}
+        }
+        \resumeItemListEnd
+        }
+        \resumeItemListEnd
+        
+
+
+  \resumeSubHeadingListEnd
+
+
+
+% --------PROGRAMMING SKILLS------------
+\section{Independent Projects}
+\resumeSubHeadingListStart
+\item{
+  \textbf{{Health Fusion}}
+\hfill
+{September 2014 - June 2015}\\
+  {Project based on Adhaar for safe Handling of medical data and preventing drug abuse }{}
+   }  
+\item{
+  \textbf{{Faculty Assessment}}
+\hfill
+{May 2014 - July 2014}\\
+  {Web Application for Faculty performance assessment based of student feedback}{}
+   }
+ 
+
+\resumeSubHeadingListEnd
+% --------PROGRAMMING SKILLS------------
+\section{Skills and Interest}
+ \resumeSubHeadingListStart
+   \item{
+     \textbf{Languages}{: Profecient in C, C++, SQL, familiar with Android, Java ,Python, Javascript, LLVM-JIT, Perl}
+    }
+   \item{
+    \textbf{Tools} GIT, Amazon web serivices, Linux, LAMP Stack.
+  }
+ \resumeSubHeadingListEnd
+%-----------PROJECTS-----------------
+\section{Achievements}
+\resumeSubHeadingListStart
+\item{
+{
+  Industrial Datalogging was awarded the best Project of the term.
+}}   
+\item{
+{Awarded \$14000 by SNR Trust for 'Vechicle Tracking System' For R\&D.}   
+} 
+\item{
+{ Health Fusion was awarded as Innovative project award by HR Cube with an award of Rs:50000}}
+   
+ \resumeSubHeadingListEnd
+
+
+
+% -------------------------------------------
+\end{document}
+
