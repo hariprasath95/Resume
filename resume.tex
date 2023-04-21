@@ -1,5 +1,4 @@
 \documentclass[letterpaper,11pt]{article}
-
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
@@ -51,6 +50,12 @@
     \end{tabular*}\vspace{-5pt}
 }
 
+\newcommand{\resumeSubheadingItem}[2]{
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
 \newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
 
 \renewcommand{\labelitemii}{$\circ$}
@@ -68,40 +73,59 @@
 
 %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\Large Hariprasath Parthasarathy} & Email : \href{mailto:hparthas@buffalo.edu}{hparthas@buffalo.edu}\\
-  \ &\ Mobile : +1-716-427-9783 \\
+  \textbf{\Large Hariprasath Parthasarathy} & Email : \href{mailto:hariprasath95@gmail.com}{hariprasath95@gmail.com}\\
+  \ &\ Mobile : +1-916-430-6616 \\
 
 \end{tabular*}
 
 
-%-----------EDUCATION-----------------
-\section{Education}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {University at Buffalo(State University of New York)}{Buffalo, NY}
-      {Master of Science in Computer Science and Engineering }{Aug. 2018 -- Dec. 2019}
-      \begin{itemize}
-        \item {{Coursework: Analysis of algorithms, Computer vision and image processing, Operating systems, Distributed System, Database Systems, Malware Detection using static analysis}} 
-        \vspace{-5px}
-      \end{itemize} 
-
-    \resumeSubheading
-      {Sri Ramakrishna Engineering College}{Coimbatore, India}
-      {Bachelor of Engineering in Computer Science and Engineering.  }{Aug. 2013 -- July. 2017}
-
-
-  \resumeSubHeadingListEnd
- 
+% --------PROGRAMMING SKILLS------------
+\section{Skills and Interest}
+ \resumeSubHeadingListStart
+   \item{
+     \textbf{Languages}{: Java, React, C, C++, Spring boot, Python, LLVM}
+    }
+   \item{
+    \textbf{Interests}: Database Internals, Back-end development, Linux containers, Systems programming
+  }
+  \item{
+    \textbf{Awards}: Won fastest query processor in CSE562, Best MS Researcher both from University at buffalo
+  }
+ \resumeSubHeadingListEnd
 
 %-----------EXPERIENCE-----------------
 \section{Experience}
   \resumeSubHeadingListStart
+  \resumeSubheading
+  {Oracle Corporation}{Redwood City, CA}
+  {Senior database kernel engineer, Oracle DB }{June-2021 - current}
+  \resumeItemListStart
+    \resumeItem{Database sharding - native replication (C, C++, Raft consensus)}
+      {    
+        \resumeItemListStart
+        \item{{writing / managing the IO and seriealization, coordination of shards for Raft based sharded database }}
+       \resumeItemListEnd
+        }\vspace{2px}
 
+           \resumeItemListEnd
   \resumeSubheading
   {Amazon Services Inc}{Seattle, WA}
+  {Software Development Engineer, Amazon Devices}{March 2020 - June 2021}
+  \resumeItemListStart
+    \resumeItem{Return processing and management for Amazon devices - (Java, Springboot, React))}
+      {    
+        \resumeItemListStart
+        \item {{Responsible for redesigning and migrating an externally facing micro service containing 17 API’s optimizing
+database fetches and API latency(average 20\% across all API’s)}}
+        \item{{Deployed a new return workflow, which involved training workforce, debugging fixing release issues}}
+        \resumeItemListEnd
+        }\vspace{2px}
+
+           \resumeItemListEnd
+    \resumeSubheadingItem
   {Software Development Engineer Intern, Amazon Devices}{Summer 2019}
   \resumeItemListStart
-    \resumeItem{Vision and Machine Learning based Screening- (Computer Vision, Machine Learning, Java, Spring, Angular)}
+    \resumeItem{Vision and Machine Learning based Screening- (Computer Vision, ML, Java, Spring, Angular)}
       {    
         \resumeItemListStart
         \item {{Tools to improve flow in warehouses. The tools created by me improved to rate of dispatches by 10\%}}
@@ -137,8 +161,7 @@
             }\vspace{2px}
 
                \resumeItemListEnd
-    \resumeSubheading
-        {Zoho Corporation}{Chennai, IN}
+    \resumeSubheadingItem
         {Member Technical Staff Intern - Zoho labs - Research and Development}{Jan 2017 - Mar 2018}
         \resumeItemListStart
         \resumeItem{In Memory Foreign Data Wrapper For PostgreSQL (Database Design, C with LLVM, codegen API)}
@@ -158,35 +181,22 @@
           \resumeItemListStart
           \item{{Led a team of 4 people to Design and implement hardware and software for the fleet management system.}}
           \item{{Detect irregular driving patterns and approximate time of arrival for institutional vehicles.}}
-          \item{{Proved its commercial viability - And was Implemented for 50 vehicles for SNR Trust.}}
-        \resumeItemListEnd
+         \resumeItemListEnd
         }\vspace{2px}
-        \resumeItem{Industrial Data Logging (Arduino, Mysql, PHP)}
-        {
-          \resumeItemListStart
-          \item{ {A real-time system used to extract production data from CNC machines. 
-        It  aided proper planning and execution of orders in micro industries.
-        }}
-
-  
         \resumeItemListEnd
-        }
-        \resumeItemListEnd
-        
-
-
   \resumeSubHeadingListEnd
-
-
-% --------PROGRAMMING SKILLS------------
-\section{Skills and Interest}
- \resumeSubHeadingListStart
-   \item{
-     \textbf{Languages}{: Proficient in C, C++, PostgreSQL Internals, familiar with Android, Java, Python, Javascript}
-    }
-   \item{
-    \textbf{Tools}: GIT, Kubernetes, Docker, Amazon web services, Linux, LAMP Stack
-  }
- \resumeSubHeadingListEnd
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University at Buffalo(State University of New York)}{Buffalo, NY}
+      {Master of Science in Computer Science and Engineering }{Aug. 2018 -- Dec. 2019}
+      \begin{itemize}
+        \item {{Coursework: Analysis of algorithms, Computer vision and image processing, Operating systems, Distributed System, Database Systems, Malware Detection using static analysis}} 
+        \vspace{-5px}
+      \end{itemize} 
+    \resumeSubheading
+      {Sri Ramakrishna Engineering College}{Coimbatore, India}
+      {Bachelor of Engineering in Computer Science and Engineering.  }{Aug. 2013 -- July. 2017}
+  \resumeSubHeadingListEnd
 \end{document}
-
