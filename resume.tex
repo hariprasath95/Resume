@@ -1,202 +1,157 @@
-\documentclass[letterpaper,11pt]{article}
-\usepackage{latexsym}
+\documentclass[letterpaper,10pt]{article}
+
+% Layout packages
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
-\usepackage{marvosym}
-\usepackage[usenames,dvipsnames]{color}
-\usepackage{verbatim}
 \usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
 \usepackage{fancyhdr}
+\usepackage[usenames,dvipsnames]{color}
 
-
+% Page style
 \pagestyle{fancy}
-\fancyhf{} % clear all header and footer fields
-\fancyfoot{}
+\fancyhf{} % clear header/footer
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
+\setlength{\footskip}{15pt}
 
-% Adjust margins
-\addtolength{\oddsidemargin}{-0.5in}
-\addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
-
+% Page margins and spacing
+\addtolength{\oddsidemargin}{-0.75in}
+\addtolength{\evensidemargin}{-0.75in}
+\addtolength{\textwidth}{1.5in}
+\addtolength{\topmargin}{-0.7in}
+\addtolength{\textheight}{1.4in}
+\renewcommand{\baselinestretch}{0.98}
 \urlstyle{same}
-
 \raggedbottom
 \raggedright
 \setlength{\tabcolsep}{0in}
 
-% Sections formatting
-\titleformat{\section}{
+% Section heading style
+\titleformat{\section}{%
   \vspace{-4pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
-%-------------------------
-% Custom commands
-\newcommand{\resumeItem}[2]{
-  \item\small{
-    \textbf{#1}{: #2 \vspace{-2pt}}
-  }
+% Resume-specific commands
+\newcommand{\resumeItem}[2]{%
+  \item\small{\textbf{#1}: #2 \vspace{-2pt}}%
 }
 
-\newcommand{\resumeSubheading}[4]{
+\newcommand{\resumeSubheading}[4]{%
   \vspace{-1pt}\item
-    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-5pt}
+  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+    \textit{\small#3} & \textit{\small #4} \\
+  \end{tabular*}\vspace{-5pt}
 }
 
-\newcommand{\resumeSubheadingItem}[2]{
-    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} & \textit{\small #2} \\
-    \end{tabular*}\vspace{-5pt}
+\newcommand{\resumeSubheadingItem}[2]{%
+  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textit{\small#1} & \textit{\small #2} \\
+  \end{tabular*}\vspace{-5pt}
 }
 
 \newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
-
-\renewcommand{\labelitemii}{$\circ$}
-
+\renewcommand{\labelitemii}{$\bullet$}
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{0pt}}
 
-%-------------------------------------------
-%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+% -------------------------------------------
+% CV content starts here
+% -------------------------------------------
 
 \begin{document}
 
-%----------HEADING-----------------
-\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\Large Hariprasath Parthasarathy} & Email : \href{mailto:hariprasath95@gmail.com}{hariprasath95@gmail.com}\\
-  \ &\ Mobile : +1-916-430-6616 \\
+% ---------- HEADING ----------
+\begin{center}
+  {\Large \textbf{Hariprasath Parthasarathy}} \\
+  \vspace{2pt}
+  \small
+  Senior Software Engineer $|$ Vancouver, BC $|$ US: H-1B $|$ Canada: Permanent Resident \\
+  \vspace{2pt}
+  Email: \href{mailto:hariprasath95@gmail.com}{hariprasath95@gmail.com} $|$
+  Phone: +1-916-430-6616 $|$
+  LinkedIn: \href{https://www.linkedin.com/in/hariprasath95}{linkedin.com/in/hariprasath95}
+\end{center}
 
-\end{tabular*}
+% ---------- SUMMARY ----------
+\section{Summary}
+\vspace{2pt}
+\small{Software engineer with 7+ years specializing in database internals in C and C++, including 3.5 years in Oracle's database kernel building Raft-based sharding replication and earlier storage-engine and JIT query-executor work on PostgreSQL systems. Strong fundamentals in data structures, algorithms, and software design.}
+\vspace{-4pt}
 
-
-% --------PROGRAMMING SKILLS------------
-\section{Skills and Interest}
- \resumeSubHeadingListStart
-   \item{
-     \textbf{Languages}{: Java, React, C, C++, Spring boot, Python, LLVM}
-    }
-   \item{
-    \textbf{Interests}: Database Internals, Back-end development, Linux containers, Systems programming
-  }
-  \item{
-    \textbf{Awards}: Won fastest query processor in CSE562, Best MS Researcher both from University at buffalo
-  }
- \resumeSubHeadingListEnd
-
-%-----------EXPERIENCE-----------------
+% ---------- EXPERIENCE ----------
 \section{Experience}
-  \resumeSubHeadingListStart
+\resumeSubHeadingListStart
   \resumeSubheading
-  {Oracle Corporation}{Redwood City, CA}
-  {Senior database kernel engineer, Oracle DB }{June-2021 - current}
+    {2by4.ai, Co-founder \& CTO}{San Francisco, CA}
+    {AI pre-construction platform $\cdot$ Backed by Entrepreneurs First \& Transpose Platform}{July 2025 -- Present}
   \resumeItemListStart
-    \resumeItem{Database sharding - native replication (C, C++, Raft consensus)}
-      {    
-        \resumeItemListStart
-        \item{{writing / managing the IO and seriealization, coordination of shards for Raft based sharded database }}
-       \resumeItemListEnd
-        }\vspace{2px}
+    \item{\small Architected a multi-stage estimation pipeline combining LLMs, VLMs, and computer vision that converts hundreds of pages of construction blueprints into accurate material takeoffs, cutting estimate turnaround from 2 weeks to 3 days.}
+    \item{\small Scaled to 30 projects across 18 customers and 5 paid pilots within 6 weeks of launch, closing \$48K in annual recurring revenue (CARR), building a \$2.5M pipeline, and completing estimates on \$75M+ of construction work.}
+  \resumeItemListEnd
 
-           \resumeItemListEnd
   \resumeSubheading
-  {Amazon Services Inc}{Seattle, WA}
-  {Software Development Engineer, Amazon Devices}{March 2020 - June 2021}
+    {Vluna, Co-founder \& CEO}{San Francisco, CA}
+    {Secure container image platform $\cdot$ Entrepreneurs First}{December 2024 -- June 2025}
   \resumeItemListStart
-    \resumeItem{Return processing and management for Amazon devices - (Java, Springboot, React))}
-      {    
-        \resumeItemListStart
-        \item {{Responsible for redesigning and migrating an externally facing micro service containing 17 API’s optimizing
-database fetches and API latency(average 20\% across all API’s)}}
-        \item{{Deployed a new return workflow, which involved training workforce, debugging fixing release issues}}
-        \resumeItemListEnd
-        }\vspace{2px}
+    \item{\small Built a custom package manager and container build system from scratch that compiles every dependency from source, producing hardened, near-zero-CVE images (roughly 90\% attack-surface reduction) with automated daily rebuilds and real-time patching, meeting security-mitigation SLAs at lower cost than Chainguard.}
+    \item{\small After discovery with 20+ CISOs and 40+ DevSecOps engineers converged the team on the \$42B container-security market, signed 3 design partners including a unicorn (Ironclad), with 50+ image pulls within 2 days of launch.}
+  \resumeItemListEnd
 
-           \resumeItemListEnd
-    \resumeSubheadingItem
-  {Software Development Engineer Intern, Amazon Devices}{Summer 2019}
+  \resumeSubheading
+    {Oracle Corporation}{Redwood City, CA}
+    {Senior Database Kernel Engineer, Oracle Database}{June 2021 -- December 2024}
   \resumeItemListStart
-    \resumeItem{Vision and Machine Learning based Screening- (Computer Vision, ML, Java, Spring, Angular)}
-      {    
-        \resumeItemListStart
-        \item {{Tools to improve flow in warehouses. The tools created by me improved to rate of dispatches by 10\%}}
-        \item{{Process return screening in warehouses with computer vision and machine learning. Accrately 92\%}}
-        \resumeItemListEnd
-        }\vspace{2px}
+    \item{\small Owned the storage layer of Sharding Native Replication (23ai), the Raft-based engine that replaced Oracle's external replication tooling with active/active shards and automatic sub-second failover; built core components for shard coordination and leader/follower state management in C/C++.}
+    \item{\small Designed and implemented the IO and serialization layer that persists and ships Raft log records across replication units; tested and hardened recovery paths under node failure, network partition, and message loss.}
+    \item{\small As part of the team that deployed Oracle Database for Bank of America, processing \$2.5 trillion in transactions, contributed design reviews, code reviews, and production C/C++ across the distributed database stack.}
+  \resumeItemListEnd
 
-           \resumeItemListEnd
-    \resumeSubheading
-      {University at Buffalo}{Buffalo, NY}
-      {Research Programmer - UB-ANC - Drones Lab}{Spring 2019}
-      \resumeItemListStart
-        \resumeItem{Drones navigation system - EMANE Integration (EMANE, NS3, LXC Containers)}
-          {    
-            \resumeItemListStart
-            \item{{Modified UB's inhouse drone simulation to support AFRL's EMANE network simulator.}}
-            \item{{Support integration with LXC containers that would facilitate Distributed simulation.}}
-           \resumeItemListEnd
-            }\vspace{2px}
+  \resumeSubheading
+    {Amazon}{Seattle, WA}
+    {Software Development Engineer, Amazon Devices}{March 2020 -- June 2021}
+  \resumeItemListStart
+    \item{\small Redesigned and migrated Amazon Devices' externally facing returns microservice of 17 APIs (Java, Spring Boot, React), optimizing database queries and fetches to cut API latency by 20\%.}
+  \resumeItemListEnd
 
-               \resumeItemListEnd
-        \resumeSubheading
-      {Zoho Corporation}{Chennai, IN}
-      {Member technical Staff - Zoho labs - Research and Development}{May 2017 - May 2018}
-      \resumeItemListStart
-        \resumeItem{Cstore -FDW (Columnar  storages ,OLAP systems)}
-          {    
-            \resumeItemListStart
-            \item{{Modified CITUSDB CStore FDW to accommodate in-memory caching, deletes and JIT executor.}}
-            \item{{The JIT executor improved query performance by a factor of 8 - 10 on OLAP queries of 30 million rows.}}
-            \item{{Deployed Cstore system backing kafka/mysql across 30 clusters.}}
-            \resumeItemListEnd
-            }\vspace{2px}
+  \resumeSubheading
+    {Zoho Corporation}{Chennai, India}
+    {Member Technical Staff, Zoho Labs (Research and Development)}{May 2017 -- May 2018}
+  \resumeItemListStart
+    \item{\small Extended CitusDB's CStore columnar FDW (C, LLVM) with in-memory caching, deletes, and a JIT query executor, improving query performance 8--10x on OLAP analytics queries over 30M rows.}
+    \item{\small Prototyped an in-memory PostgreSQL foreign data wrapper with a custom storage engine and query executor, using lock-free Bw-tree indexing and write-ahead logging for high-throughput workloads.}
+  \resumeItemListEnd
 
-               \resumeItemListEnd
-    \resumeSubheadingItem
-        {Member Technical Staff Intern - Zoho labs - Research and Development}{Jan 2017 - Mar 2018}
-        \resumeItemListStart
-        \resumeItem{In Memory Foreign Data Wrapper For PostgreSQL (Database Design, C with LLVM, codegen API)}
-        {
-          \resumeItemListStart
-            \item{{Designed and implemented the storage engine and executor as a foreign data wrapper for postgreSQL.}}
-            \item{{Successfully implemented lock free indexing(BW tree) and write-ahead logging.}}
-            \resumeItemListEnd
-        }  
-        \resumeItemListEnd
-        \resumeSubheading
-      {Sri Ramakrishna Engineering College - Centre For Innovation }{Coimbatore, India}
-      { Undergraduate Research / Student Chairman  }{Aug. 2015 -- Dec. 2016}
-      \resumeItemListStart  
-      \resumeItem{Fleet Management System -(Android, AngularJS-2, Redis, Embedded C Programming)}  
-        {
-          \resumeItemListStart
-          \item{{Led a team of 4 people to Design and implement hardware and software for the fleet management system.}}
-          \item{{Detect irregular driving patterns and approximate time of arrival for institutional vehicles.}}
-         \resumeItemListEnd
-        }\vspace{2px}
-        \resumeItemListEnd
-  \resumeSubHeadingListEnd
-%-----------EDUCATION-----------------
+\resumeSubHeadingListEnd
+
+% ---------- SKILLS ----------
+\section{Technical Skills}
+\resumeSubHeadingListStart
+  \item{\textbf{Languages}: C++, C, Java, Python, JavaScript, SQL}
+  \item{\textbf{Databases and Systems}: Query engines, query optimization, storage engines, columnar/OLAP storage, distributed databases, sharding, replication, high availability, Raft consensus, JIT query compilation, indexing, write-ahead logging, PostgreSQL, MySQL}
+  \item{\textbf{Frameworks and Tools}: LLVM, Docker, Kubernetes, Kafka, Linux/LXC containers, Spring Boot, React, Git}
+  \item{\textbf{AI and ML}: LLMs, VLMs, computer vision}
+\resumeSubHeadingListEnd
+
+% ---------- PROJECTS / AWARDS ----------
+\section{Projects and Awards}
+\resumeSubHeadingListStart
+  \item{\textbf{Fastest Query Processor, CSE 562 (Database Systems)}: Built a query processor that placed first for execution speed against the full graduate class.}
+  \item{\textbf{Best MS Researcher, University at Buffalo}: Recognized for graduate research contributions in database and systems.}
+\resumeSubHeadingListEnd
+
+% ---------- EDUCATION ----------
 \section{Education}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {University at Buffalo(State University of New York)}{Buffalo, NY}
-      {Master of Science in Computer Science and Engineering }{Aug. 2018 -- Dec. 2019}
-      \begin{itemize}
-        \item {{Coursework: Analysis of algorithms, Computer vision and image processing, Operating systems, Distributed System, Database Systems, Malware Detection using static analysis}} 
-        \vspace{-5px}
-      \end{itemize} 
-    \resumeSubheading
-      {Sri Ramakrishna Engineering College}{Coimbatore, India}
-      {Bachelor of Engineering in Computer Science and Engineering.  }{Aug. 2013 -- July. 2017}
-  \resumeSubHeadingListEnd
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {University at Buffalo (State University of New York)}{Buffalo, NY}
+    {Master of Science in Computer Science and Engineering}{August 2018 -- December 2019}
+  \resumeSubheading
+    {Anna University}{Chennai, India}
+    {Bachelor of Engineering in Computer Science and Engineering}{2013 -- 2017}
+\resumeSubHeadingListEnd
+
 \end{document}

@@ -1,0 +1,15 @@
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.toc
+
+# Archives and OS files
+*.zip
+.DS_Store
+
+# Local notes (not for the public repo)
+tailoring.md
